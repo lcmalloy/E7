@@ -55,7 +55,21 @@
 
     .header {
       background-color:azure;
+      height: 100%;
+      width: 100%;
       grid-area: header;
+
+      display: grid;
+      grid-template: 1fr / repeat(2, 1fr);
+      grid-template-areas:
+      "logo nav-buttons"
+      ;
+    }
+
+    .nav-buttons {
+      background-color:#F2b705;
+      grid-area: nav-buttons;
+      min-width: 9em;
     }
 
     .nav {
@@ -82,7 +96,11 @@
       grid-area: similar-item;
     }
 
-    .banner {
+    .vertical-banner-main {
+      display:none;
+    }
+
+    .horizontal-banner-main {
       display:none;
     }
 
@@ -106,6 +124,12 @@
       ;
     }
 
+    .logo {
+      background-color:beige;
+      grid-area: logo;
+      min-width: 9em;
+    }
+
     .nav {
       background-color:green;
       min-width: 200px;
@@ -113,7 +137,26 @@
       display: block;
     }
 
-    .banner {
+    .header {
+      display: grid;
+      grid-template: 1fr / 2fr 6fr 2fr;
+      grid-template-areas:
+      "logo horizontal-banner nav-buttons"
+      ;
+    }
+
+    .horizontal-banner-main {
+      background-color: rgb(74, 190, 114);
+      min-width: 10em;
+      display: block;
+      grid-area: horizontal-banner;
+    }
+
+    .nav-buttons {
+      display: none;
+    }
+
+    .vertical-banner-main {
       background-color:rgb(194, 38, 38);
       grid-area: banner;
       display: block;
