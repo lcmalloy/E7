@@ -7,25 +7,43 @@
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
 
+.primary1 {
+  background-color: #ce5bf2
+}
+
+.primary2 {
+  background-color: #e1d5f2
+}
+
+.primary3 {
+  background-color: #7552f2
+}
+
+.secondary1 {
+  background-color: #50B4f2
+}
+
+.secondary2 {
+  background-color: #F2b705
+}
+
 @media (grid: 0) {
-
   /* MOBILE GRID LAYOUT */
-
   @media (min-width:20em) {
     .container {
       display: grid;
       height: 200vh;
       width: 100vw;
       margin: 10px 10px 10px 10px;
-      grid-template: 1fr 3fr 1fr 5fr 2fr 2fr / 1fr 6fr;
+      grid-template: 1fr 3fr 1fr 5fr 2fr 2fr / 1fr;
       gap: 20px;
       grid-template-areas:
-        "logo header"
-        "hero hero"
-        "equipment-selector equipment-selector"
-        "main main"
-        "similar-item similar-item"
-        "footer footer"
+        "header"
+        "hero"
+        "equipment-selector"
+        "main"
+        "similar-item"
+        "footer"
       ;
     }
 
@@ -68,7 +86,6 @@
       display:none;
     }
 
-
     .footer {
       background-color:palegoldenrod;
       grid-area: footer;
@@ -76,33 +93,17 @@
   }
 
   /* DESKTOP GRID LAYOUT */
-
   @media (min-width: 80em) {
     .container {
-      display: grid;
-      height: 200vh;
-      width: 100vw;
-      margin: 10px 10px 10px 10px;
-      grid-template: 1fr 3fr 1fr 5fr 2fr 2fr / 1fr 6fr 1fr;
-      gap: 20px;
+      grid-template: 1fr 3fr 1fr 5fr 2fr 2fr / 2fr 6fr 2fr;
       grid-template-areas:
-        "logo header header"
+        "header header header"
         "nav hero banner"
         "nav equipment-selector banner"
         "nav main banner"
         "nav similar-item banner"
         "footer footer footer"
       ;
-    }
-
-    .logo {
-      background-color:beige;
-      grid-area: logo;
-    }
-
-    .header {
-      background-color:azure;
-      grid-area: header;
     }
 
     .nav {
@@ -112,36 +113,12 @@
       display: block;
     }
 
-    .hero {
-      background-color:beige;
-      grid-area: hero;
-    }
-
-    .equipment-selector {
-      background-color:blueviolet;
-      grid-area: equipment-selector;
-    }
-
-    .main {
-      background-color:aliceblue;
-      grid-area: main;
-    }
-
-    .similar-item {
-      background-color:royalblue;
-      grid-area: similar-item;
-    }
-
     .banner {
       background-color:rgb(194, 38, 38);
       grid-area: banner;
       display: block;
     }
-
-
-    .footer {
-      background-color:palegoldenrod;
-      grid-area: footer;
-    }
   }
 }
+
+

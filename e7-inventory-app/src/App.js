@@ -3,9 +3,11 @@ import './App.css';
 function App() {
 
   return (
-    <div className="container">
-      <div className="logo">logo</div>
-      <div className="header">header</div>
+    <div className="container primary3">
+      <div className="header">
+        Header
+        <div className="logo">logo</div>
+      </div>
       <div className="nav">nav</div>
       <div className="hero">hero</div>
       <div className="equipment-selector">equipment</div>
