@@ -1,14 +1,11 @@
-import './App.css';
+import './App.scss';
+import Navbar from './components/navbar/Navbar.jsx'
 
 function App() {
 
   return (
-    <div className="container primary3">
-      <div className="header">
-        <div className="logo">logo</div>
-        <div className="horizontal-banner-main">E7 Banner</div>
-        <div className="nav-buttons">nav button</div>
-      </div>
+    <div className="container">
+      <Navbar/>
       <div className="nav">nav</div>
       <div className="hero">hero</div>
       <div className="equipment-selector">equipment</div>
