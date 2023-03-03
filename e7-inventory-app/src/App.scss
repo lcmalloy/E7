@@ -37,7 +37,6 @@ $secondary2: #F2b705;
       ;
       .header {
         @include grid-theme($primary3, black, header1);
-
         display: grid;
         grid-template: 1fr/repeat(2, 1fr);
         grid-template-areas:
@@ -82,14 +81,14 @@ $secondary2: #F2b705;
   }
   @media (min-width: 80em) {
     .container {
-      grid-template: 13em 3fr 1fr 5fr 2fr 2fr / 6em 9fr;
+      grid-template: 13em 3fr 1fr 5fr 2fr 2fr / 6em 9fr 1em;
       grid-template-areas:
-        "nav-l header1"
-        "nav-l hero "
-        "nav-l equipment-selector"
-        "nav-l main"
-        "nav-l similar-item"
-        "footer footer"
+        "nav-l header1 header1"
+        "nav-l hero hero"
+        "nav-l equipment-selector equipment-selector"
+        "nav-l main main"
+        "nav-l similar-item similar-item"
+        "footer footer footer"
       ;
       .nav {
         @include grid-theme($bg1, black, nav-l);
@@ -98,6 +97,9 @@ $secondary2: #F2b705;
 
       .header {
         grid-template: 1fr / 2fr 6fr 2fr;
+        position: fixed;
+        width: 100%;
+        height: 13em;
         grid-template-areas:
         "logo horizontal-banner nav-buttons"
         ;

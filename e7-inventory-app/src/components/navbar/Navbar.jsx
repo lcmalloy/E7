@@ -9,8 +9,7 @@ import {RiLoginCircleLine} from 'react-icons/ri'
 import logo from '../../assets/logo-small.png'
 
 const Navbar = () => {
-
-  return (
+   return (
     <div className="nav">
       <div className="vertical-nav-container">
         <img src={logo} alt="logo"/>

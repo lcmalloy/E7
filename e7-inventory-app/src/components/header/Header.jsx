@@ -1,7 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { HiX, HiMenu } from 'react-icons/hi'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 import logo from '../../assets/logo-large.png'
 import banner from '../../assets/epic_seven.jpeg'
 import './Header.scss'
@@ -9,12 +8,14 @@ import './Header.scss'
 const Header = () => {
   const [toggle, setToggle] = useState(false)
   return (
-    <nav className="header">
+    <div className="header">
       <div className="logo">
         <img src={logo} alt="logo"/>
       </div>
       <div className="horizontal-banner-main">
-        <img src={null} alt='banner' />
+        <div className="horizontal-banner-container">
+          <img src={null} alt='banner' />
+        </div>
       </div>
       <div className="nav-menu">
         <div className="nav-menu-display">
@@ -36,7 +37,7 @@ const Header = () => {
           )}
         </div>
       </div>
-    </nav>
+    </div>
   )
 }
 
