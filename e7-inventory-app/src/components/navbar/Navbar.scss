@@ -33,6 +33,12 @@
       color: black;
       height: 40px;
       width: 40px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    svg:hover {
+      color: white;
+      cursor: crosshair;
     }
   }
 }
@@ -51,5 +57,12 @@
     background-color: rgb(249, 237, 216);
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
   }
+
+  div:hover {
+    background-color:white;
+    cursor: crosshair;
+  }
+
 }

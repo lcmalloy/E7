@@ -60,7 +60,10 @@ $secondary2: #F2b705;
         @include grid-theme(blueviolet, black, equipment-selector)
       }
       .main {
-        @include grid-theme(aliceblue, black, main)
+        @include grid-theme(aliceblue, black, main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .similar-item {
         @include grid-theme(royalblue, black, similar-item)
@@ -97,7 +100,6 @@ $secondary2: #F2b705;
 
       .header {
         grid-template: 1fr / 2fr 6fr 2fr;
-        position: fixed;
         width: 100%;
         height: 13em;
         grid-template-areas:
