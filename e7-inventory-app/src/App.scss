@@ -26,7 +26,7 @@ $secondary2: #F2b705;
       display: grid;
       height: 200vh;
       width: 100vw;
-      grid-template: 1fr 3fr 1fr 5fr 2fr 2fr / 1fr;
+      grid-template: 10em 3fr 1fr 5fr 2fr 2fr / 1fr;
       grid-template-areas:
         "header1"
         "hero"
@@ -45,11 +45,11 @@ $secondary2: #F2b705;
         ;
       }
       .logo {
-        @include grid-theme($primary2, black, logo);
+        @include grid-theme($primary3, black, logo);
         min-width: 9em;
       }
       .nav-menu {
-        @include grid-theme($secondary1, black, nav-buttons);
+        @include grid-theme($primary3, black, nav-buttons);
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -82,14 +82,14 @@ $secondary2: #F2b705;
   }
   @media (min-width: 80em) {
     .container {
-      grid-template: 1fr 3fr 1fr 5fr 2fr 2fr / 6em 9fr 1.5fr;
+      grid-template: 13em 3fr 1fr 5fr 2fr 2fr / 6em 9fr;
       grid-template-areas:
-        "nav-l header1 header1"
-        "nav-l hero banner"
-        "nav-l equipment-selector banner"
-        "nav-l main banner"
-        "nav-l similar-item banner"
-        "footer footer footer"
+        "nav-l header1"
+        "nav-l hero "
+        "nav-l equipment-selector"
+        "nav-l main"
+        "nav-l similar-item"
+        "footer footer"
       ;
       .nav {
         @include grid-theme($bg1, black, nav-l);
@@ -103,12 +103,8 @@ $secondary2: #F2b705;
         ;
       }
       .horizontal-banner-main {
-        @include grid-theme(blue, black, horizontal-banner);
+        @include grid-theme(rgb(164, 164, 227), black, horizontal-banner);
         min-width: 10em;
-        display: block;
-      }
-      .vertical-banner-main {
-        @include grid-theme(red, black, banner);
         display: block;
       }
       .nav-menu {
