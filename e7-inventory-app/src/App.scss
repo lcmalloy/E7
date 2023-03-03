@@ -1,0 +1,119 @@
+/*color scheme 1*/
+$primary-bg-dark: #0E0B16;
+$primary-bg-light: #E7DFDD;
+$secondary-color: #4717F6;
+$font-color-dark: #000000;
+$font-color-white: #e1d5f2;
+
+/*color scheme 2*/
+$bg1: #7392c265;
+$primary1: #ce5bf2;
+$primary2:#e1d5f2;
+$primary3: #7552f2;
+$secondary1: #50B4f2;
+$secondary2: #F2b705;
+
+@mixin grid-theme($theme: DarkGrey, $color: black, $grid-area: none) {
+  background-color: $theme;
+  color: $color;
+  grid-area: $grid-area;
+}
+
+@media (grid: 0) {
+  /* MOBILE GRID LAYOUT*/
+  @media (min-width:20em) {
+    .container {
+      display: grid;
+      height: 200vh;
+      width: 100vw;
+      grid-template: 10em 3fr 1fr 5fr 2fr 2fr / 1fr;
+      grid-template-areas:
+        "header1"
+        "hero"
+        "equipment-selector"
+        "main"
+        "similar-item"
+        "footer"
+      ;
+      .header {
+        @include grid-theme($primary3, black, header1);
+        display: grid;
+        grid-template: 1fr/repeat(2, 1fr);
+        grid-template-areas:
+        "logo nav-buttons"
+        ;
+      }
+      .logo {
+        @include grid-theme($primary3, black, logo);
+        min-width: 9em;
+      }
+      .nav-menu {
+        @include grid-theme($primary3, black, nav-buttons);
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+      .hero {
+        @include grid-theme($primary1, black, hero);
+      }
+      .equipment-selector {
+        @include grid-theme(blueviolet, black, equipment-selector)
+      }
+      .main {
+        @include grid-theme(aliceblue, black, main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .similar-item {
+        @include grid-theme(royalblue, black, similar-item)
+      }
+      .footer {
+        @include grid-theme(palegoldenrod, black, footer)
+      }
+      .nav {
+        display:none;
+      }
+      .vertical-banner-main {
+        display: none;
+      }
+      .horizontal-banner-main {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 80em) {
+    .container {
+      grid-template: 13em 3fr 1fr 5fr 2fr 2fr / 6em 9fr 1em;
+      grid-template-areas:
+        "nav-l header1 header1"
+        "nav-l hero hero"
+        "nav-l equipment-selector equipment-selector"
+        "nav-l main main"
+        "nav-l similar-item similar-item"
+        "footer footer footer"
+      ;
+      .nav {
+        @include grid-theme($bg1, black, nav-l);
+        display: block;
+      }
+
+      .header {
+        grid-template: 1fr / 2fr 6fr 2fr;
+        width: 100%;
+        height: 13em;
+        grid-template-areas:
+        "logo horizontal-banner nav-buttons"
+        ;
+      }
+      .horizontal-banner-main {
+        @include grid-theme(rgb(164, 164, 227), black, horizontal-banner);
+        min-width: 10em;
+        display: block;
+      }
+      .nav-menu {
+        display: none;
+      }
+    }
+  }
+}
