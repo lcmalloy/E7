@@ -1,42 +1,50 @@
 import React from 'react'
-import { HiX, HiMenu } from 'react-icons/hi'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import logo from '../../assets/gaming-logo-creator-with-an-anime-fighter-character-2718b (1).png'
-import banner from '../../assets/epic_seven.jpeg'
 import './Navbar.scss'
+import { IoHome } from 'react-icons/io5'
+import { BsCalculator } from 'react-icons/bs'
+import { CgProfile } from 'react-icons/cg'
+import { MdOutlineInventory2 } from 'react-icons/md'
+import {RiLoginCircleLine} from 'react-icons/ri'
+
+import logo from '../../assets/logo-small.png'
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false)
+
   return (
-    <nav className="header">
-      <div className="logo">
+    <div className="nav">
+      <div className="vertical-nav-container">
         <img src={logo} alt="logo"/>
-      </div>
-      <div className="horizontal-banner-main">
-        <img src={null} alt='banner' />
-      </div>
-      <div className="nav-menu">
-        <div className="nav-menu-display">
-        <HiMenu onClick={() => setToggle(true)} />
-          {toggle && (
-            <motion.div
-              whileInView={{ x: [300, 0]}}
-              transition={{ duration: 0.85, ease: 'easeOut'}}
-              >
-                <HiX onClick={() => setToggle(false)} />
-                <ul>
-                  {['Home', 'Calculator', 'Inventory', 'Login'].map((link) => (
-                    <li key={link}>
-                      <a href={`#${link}`} onClick={() => setToggle(false)}>{link}</a>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-          )}
+        <div className="nav-links">
+          <div className="nav-links-container">
+            <div className="circle-nav">
+              <IoHome />
+            </div>
+            Home
+          </div>
+          <div className="nav-links-container">
+            <div className="circle-nav">
+              <BsCalculator />
+            </div>
+            Calculator
+          </div>
+          <div className="nav-links-container">
+          <div className="circle-nav">
+            <MdOutlineInventory2 />
+          </div>
+            Inventory
+          </div>
+          <div className="nav-links-container">
+          <div className="circle-nav">
+            <CgProfile />
+          </div>
+            Profile
+          </div>
+          <div className="nav-links-container">
+            <RiLoginCircleLine />
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   )
 }
 

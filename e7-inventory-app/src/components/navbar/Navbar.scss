@@ -1,58 +1,55 @@
-@import '../../App';
+@import '../../App.scss';
 
-.nav-menu-display {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
+.vertical-nav-container {
+  width: 6em;
+  height: 100vh;
+  border-right: solid black;
+  background-color: $secondary2;
+  position: fixed;
+
+  img {
+    width: 6em;
+  }
+}
+
+.nav-links {
+  display:flex;
   align-items: center;
-  background-color: white;
-  margin-right: 40px;
+  flex-direction: column;
+  padding-top: 30px;
+  height: 100%;
 
   svg {
-    width: 70%;
-    height: 100%;
-    color: rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    color: $primary3;
   }
-  div {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
-    padding: 1rem;
-    width: 40%;
-    height: 100vh;
-    border-left: solid black;
-    display: flex;
-    flex-direction: column;
 
-    background-color: rgb(255, 255, 255);
-    // box-shadow: 0 0 20px rgba(168,168,168,0.15);
+  .nav-links-container:last-child {
+    height: 60vh;
+    flex-direction: column-reverse;
 
     svg {
-      width: 20%;
-      height: 10%;
-      color: $primary3;
+      color: black;
+      height: 40px;
+      width: 40px;
     }
   }
 }
 
-.logo {
+.nav-links-container {
   display: flex;
-  flex: 1;
+  flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 
-  img {
-    margin-left: 20px;
-    height: 150px;
-  }
-
-  @media (min-width: 80em) {
-    img {
-      display: none;
-    }
+  div {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(249, 237, 216);
+    align-items: center;
+    justify-content: center;
   }
 }

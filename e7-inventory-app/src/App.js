@@ -1,12 +1,14 @@
 import './App.scss';
-import Navbar from './components/navbar/Navbar.jsx'
+import Header from './components/header/Header.jsx';
+import Navbar from './components/Navbar/Navbar.jsx';
 
-function App() {
+
+const App = () => {
 
   return (
     <div className="container">
+      <Header/>
       <Navbar/>
-      <div className="nav">nav</div>
       <div className="hero">hero</div>
       <div className="equipment-selector">equipment</div>
       <div className="main">main</div>
