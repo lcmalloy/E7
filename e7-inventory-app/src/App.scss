@@ -60,7 +60,7 @@ $secondary2: #F2b705;
         @include grid-theme(blueviolet, black, equipment-selector)
       }
       .main {
-        @include grid-theme(aliceblue, black, main);
+        @include grid-theme($bg1, black, main);
         display: flex;
         flex-direction: column;
         align-items: center;
