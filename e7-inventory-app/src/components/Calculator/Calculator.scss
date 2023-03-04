@@ -32,14 +32,21 @@
       padding: 30px;
 
       div {
-        display:flex;
-        justify-content: center;
+        display:grid;
+        grid-template: 1fr / 1fr 1fr;
         align-items: center;
+        input {
+          width: 50px;
+        }
       }
 
       button {
         border-radius: 25px;
         width: 50%;
+      }
+
+      label {
+        margin: 0px 40px
       }
     }
     .stat-input-flatAtk {
