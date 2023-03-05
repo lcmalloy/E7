@@ -7,6 +7,7 @@ $font-color-white: #e1d5f2;
 
 /*color scheme 2*/
 $bg1: #7392c265;
+$bg2: #3a4b6465;
 $primary1: #ce5bf2;
 $primary2:#e1d5f2;
 $primary3: #7552f2;
@@ -54,10 +55,12 @@ $secondary2: #F2b705;
         align-items: center;
       }
       .hero {
-        @include grid-theme($primary1, black, hero);
+        @include grid-theme($bg1, black, hero);
       }
       .equipment-selector {
-        @include grid-theme(blueviolet, black, equipment-selector)
+        @include grid-theme($bg2, black, equipment-selector);
+        display: grid;
+        grid-template: 1fr/repeat(2, 1fr);
       }
       .main {
         @include grid-theme($bg1, black, main);
@@ -66,10 +69,10 @@ $secondary2: #F2b705;
         align-items: center;
       }
       .similar-item {
-        @include grid-theme(royalblue, black, similar-item)
+        @include grid-theme($bg2, black, similar-item)
       }
       .footer {
-        @include grid-theme(palegoldenrod, black, footer)
+        @include grid-theme($primary3, black, footer)
       }
       .nav {
         display:none;

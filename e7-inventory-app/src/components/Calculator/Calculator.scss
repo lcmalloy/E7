@@ -11,7 +11,7 @@
 
     .calc-stats {
       background-color: $secondary1;
-      width: 500px;
+      width: 350px;
       height: 500px;
       border-radius: 50px;
       display: grid;
@@ -89,6 +89,10 @@
       "critChance critDamage"
       "speed speed"
       ;
+
+      div {
+        justify-items: end;
+      }
     }
   }
 }
