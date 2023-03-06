@@ -3,7 +3,9 @@ import Header from './components/Header/Header.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Calculator from './components/Calculator/Calculator.jsx'
 import ReelSelector from './components/ReelSelector/ReelSelector.jsx'
-import LevelSelector from './components/LevelSelector/LevelSelector.jsx'
+
+import equipmentTypes from './static/equipment'
+import equipmentLevel from './static/level'
 
 
 const App = () => {
@@ -14,8 +16,8 @@ const App = () => {
       <Navbar/>
       <div className="hero">hero</div>
       <div className="equipment-selector">
-        <ReelSelector />
-        <LevelSelector />
+        <ReelSelector className="equipment-select" types={equipmentTypes}/>
+        <ReelSelector className="item-level-select" types={equipmentLevel}/>
       </div>
       <div className="main">
       <Calculator />

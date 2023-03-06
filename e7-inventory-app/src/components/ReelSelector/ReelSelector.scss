@@ -1,8 +1,18 @@
 @import '../../App.scss';
 
+.reel-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    color: white;
+  }
+}
+
 .inventory-select-main {
   --gap: 1rem;
-  width: 500px;
+  min-width: 500px;
   height: 130px;
   display: grid;
   grid-auto-flow: column;
@@ -26,18 +36,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease;
 
     img {
       height: 70px;
+    }
+
+    div {
+      font-size: 30px;
     }
   }
 
   .type-container:hover {
     background: black;
-
-    img {
+    div {
       color: white;
     }
+  }
+
+  .type-container:active {
+    background: $secondary2;
   }
 }
 
