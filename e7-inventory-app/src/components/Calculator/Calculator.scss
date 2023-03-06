@@ -1,0 +1,112 @@
+@import '../../App.scss';
+
+h3 {
+  color: white;
+}
+
+@media (grid: 0) {
+  @media (min-width:20em) {
+    .calc-container-main {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      align-items: center;
+    }
+
+    .calc-stats-context-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calc-main {
+      border: solid #5f49bf;
+      border-radius: 50px;
+    }
+    
+    .calc-stats {
+      background-color: $secondary1;
+      width: 350px;
+      height: 500px;
+      border-radius: 50px;
+      display: grid;
+      align-content: space-around;
+      justify-items: center;
+      grid-template: repeat(1fr, 10) / 1fr 1fr;
+      grid-template-areas:
+      "flatAtk flatAtk"
+      "flatHp flatHp"
+      "flatDef flatDef"
+      "atkPercent atkPercent"
+      "defPercent defPercent"
+      "hpPercent hpPercent"
+      "critChance critChance"
+      "critDamage critDamage"
+      "speed speed"
+      ;
+      padding: 30px;
+
+      div {
+        display:grid;
+        grid-template: 1fr / 1fr 1fr;
+        align-items: center;
+        input {
+          width: 50px;
+        }
+      }
+
+      button {
+        border-radius: 25px;
+        width: 50%;
+      }
+
+      label {
+        margin: 0px 40px
+      }
+    }
+    .stat-input-flatAtk {
+      grid-area: flatAtk;
+    }
+    .stat-input-flatHp {
+      grid-area: flatHp;
+    }
+    .stat-input-flatDef {
+      grid-area: flatDef;
+    }
+    .stat-input-atkPercent {
+      grid-area: atkPercent;
+    }
+    .stat-input-defPercent {
+      grid-area: defPercent;
+    }
+    .stat-input-hpPercent {
+      grid-area: hpPercent;
+    }
+    .stat-input-critChance {
+      grid-area: critChance;
+    }
+    .stat-input-critDamage {
+      grid-area: critDamage;
+    }
+    .stat-input-speed {
+      grid-area: speed;
+    }
+  }
+  @media (min-width: 80em) {
+    .calc-stats {
+      width: 500px;
+      height: 500px;
+      grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+      grid-template-areas:
+      "flatAtk flatHp"
+      "flatDef atkPercent"
+      "defPercent hpPercent"
+      "critChance critDamage"
+      "speed speed"
+      ;
+
+      div {
+        justify-items: end;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import '../../App.scss';
+
+.reel-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    color: white;
+  }
+}
+
+.inventory-select-main {
+  --gap: 1rem;
+  min-width: 500px;
+  height: 130px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 26%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: var(--gap);
+  scroll-padding: var(--gap);
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+
+  border-radius: 20px;
+  outline: solid 5px $primary3;
+
+  .type-container {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    background: $primary2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease;
+
+    img {
+      height: 70px;
+    }
+
+    div {
+      font-size: 30px;
+    }
+  }
+
+  .type-container:hover {
+    cursor:grab;
+    background: black;
+    div {
+      color: white;
+    }
+  }
+
+  .type-container:active {
+    background: $secondary2;
+  }
+}
+
+.inventory-select-main > * {
+  scroll-snap-align: start;
+}
