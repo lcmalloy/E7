@@ -30,6 +30,7 @@
 
   .type-container {
     border-radius: 50px;
+    border: none;
     height: 100px;
     width: 100px;
     background: $primary2;
@@ -55,7 +56,7 @@
     }
   }
 
-  .type-container:active {
+  .type-container:focus {
     background: $secondary2;
   }
 }

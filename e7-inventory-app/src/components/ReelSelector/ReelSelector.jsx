@@ -7,18 +7,18 @@ const ReelSelector = (props) => {
   const types = props.types.map((type) => (
     <div key={`name-${type.name}`}>
       { type.containsImage && (
-        <div type="button" className="type-container" onClick={() => setGear({
+        <button type="button" className="type-container" onClick={() => setGear({
           type: type.name,
         })}>
           <img src={type.img} alt={type.name}/>
-        </div>
+        </button>
       )}
         {!type.containsImage && (
-          <div type="button" className="type-container" onClick={() => setGear({
+          <button type="button" className="type-container" tabindex="-1" onClick={() => setGear({
             level: type.number,
           })}>
             <div className={`level-${type.number}`} > { type.number } </div>
-          </div>
+          </button>
       )}
     </div>
   ))
