@@ -29,9 +29,9 @@ h2 {
   @media (min-width:20em) {
     .container {
       display: grid;
-      height: 200vh;
+      height: 250vh;
       width: 100vw;
-      grid-template: 10em 3fr 2fr 5fr 2fr 2fr / 1fr;
+      grid-template: 10em 3fr 45em 5fr 2fr 2fr / 1fr;
       grid-template-areas:
         "header1"
         "hero"

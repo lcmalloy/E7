@@ -16,13 +16,24 @@ h3 {
     .calc-stats-context-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 70px;
     }
 
-    .calc-main {
+    .calc-main-stat, .calc-main-context {
       border: solid #5f49bf;
       border-radius: 50px;
     }
-    
+
+    .calc-context {
+      background-color: $secondary1;
+      height: 560px;
+      width: 560px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .calc-stats {
       background-color: $secondary1;
       width: 350px;
