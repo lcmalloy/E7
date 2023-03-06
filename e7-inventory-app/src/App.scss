@@ -20,6 +20,10 @@ $secondary2: #F2b705;
   grid-area: $grid-area;
 }
 
+h2 {
+  color: white;
+}
+
 @media (grid: 0) {
   /* MOBILE GRID LAYOUT*/
   @media (min-width:20em) {
@@ -27,7 +31,7 @@ $secondary2: #F2b705;
       display: grid;
       height: 200vh;
       width: 100vw;
-      grid-template: 10em 3fr 1fr 5fr 2fr 2fr / 1fr;
+      grid-template: 10em 3fr 2fr 5fr 2fr 2fr / 1fr;
       grid-template-areas:
         "header1"
         "hero"
@@ -60,9 +64,10 @@ $secondary2: #F2b705;
       .equipment-selector {
         @include grid-theme($bg2, black, equipment-selector);
         display: grid;
-        grid-template: 1fr/repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
-        "equip-type equip-level"
+        "equip-type"
+        "equip-level"
         ;
       }
       .main {
@@ -98,7 +103,7 @@ $secondary2: #F2b705;
   }
   @media (min-width: 80em) {
     .container {
-      grid-template: 13em 3fr 1fr 5fr 2fr 2fr / 6em 9fr 1em;
+      grid-template: 13em 3fr 2fr 5fr 2fr 2fr / 6em 9fr 1em;
       grid-template-areas:
         "nav-l header1 header1"
         "nav-l hero hero"
@@ -118,6 +123,12 @@ $secondary2: #F2b705;
         height: 13em;
         grid-template-areas:
         "logo horizontal-banner nav-buttons"
+        ;
+      }
+      .equipment-selector {
+        grid-template: 1fr/repeat(2, 1fr);
+        grid-template-areas:
+        "equip-type equip-level"
         ;
       }
       .horizontal-banner-main {

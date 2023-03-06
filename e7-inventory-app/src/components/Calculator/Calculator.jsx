@@ -37,13 +37,22 @@ const Calculator = () => {
   ))
 
   return (
-    <div className="calc-container">
-      <HpBar />
-      <form className="calc-stats">
-        {statInput}
-        <button>Submit</button>
-        <button>Reset</button>
-      </form>
+    <div className="calc-container-main">
+      <h3>Gear Quality</h3>
+      <HpBar gearScore={equipmentStat} />
+      <h3>Calculator</h3>
+      <div className="calc-stats-context-container">
+        <div className="calc-main">
+          <form className="calc-stats">
+            {statInput}
+            <button>Submit</button>
+            <button>Reset</button>
+          </form>
+        </div>
+        <div className="stat-context-main">
+          This is context
+        </div>
+      </div>
     </div>
   )
 }

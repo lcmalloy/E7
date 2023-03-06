@@ -1,14 +1,28 @@
 @import '../../App.scss';
 
+h3 {
+  color: white;
+}
+
 @media (grid: 0) {
   @media (min-width:20em) {
-    .calc-container {
+    .calc-container-main {
       display: flex;
       flex-direction: column;
       width: 80%;
       align-items: center;
     }
 
+    .calc-stats-context-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calc-main {
+      border: solid #5f49bf;
+      border-radius: 50px;
+    }
+    
     .calc-stats {
       background-color: $secondary1;
       width: 350px;

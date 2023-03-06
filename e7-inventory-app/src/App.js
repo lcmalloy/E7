@@ -20,6 +20,7 @@ const App = () => {
         <ReelSelector className="item-level-select" types={equipmentLevel}/>
       </div>
       <div className="main">
+        <h2 className="gear calculator"> Gear Calculator</h2>
       <Calculator />
       </div>
       <div className="similar-item">display-similar-items</div>
