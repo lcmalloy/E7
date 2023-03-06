@@ -16,7 +16,6 @@ const Calculator = () => {
     critDamage: 0,
     speed: 0,
   })
-  const [level, setLevel] = useState(0)
 
   const resetStatValues = (e) => {
     e.preventDefault();

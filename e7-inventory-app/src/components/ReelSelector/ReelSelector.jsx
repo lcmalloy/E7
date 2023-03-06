@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ReelSelector.scss'
 
 const ReelSelector = (props) => {
+  const [gear, setGear] = useState({})
 
   const types = props.types.map((type) => (
-    <div className="type-container" key={type.name}>
+    <div key={`name-${type.name}`}>
       { type.containsImage && (
-        <img src={type.img} alt={type.name}/>
-    )}
-      {!type.containsImage && (
-      <div className={`level-${type.number}`} > { type.number } </div>
-    )}
+        <div type="button" className="type-container" onClick={() => setGear({
+          type: type.name,
+        })}>
+          <img src={type.img} alt={type.name}/>
+        </div>
+      )}
+        {!type.containsImage && (
+          <div type="button" className="type-container" onClick={() => setGear({
+            level: type.number,
+          })}>
+            <div className={`level-${type.number}`} > { type.number } </div>
+          </div>
+      )}
     </div>
   ))
   return (
