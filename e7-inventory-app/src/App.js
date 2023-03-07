@@ -1,4 +1,5 @@
 import './App.scss';
+import React, { useState } from 'react'
 import Header from './components/Header/Header.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Calculator from './components/Calculator/Calculator.jsx'
@@ -9,6 +10,7 @@ import equipmentLevel from './static/level'
 
 
 const App = () => {
+  const [gear, setGear] = useState({})
 
   return (
     <div className="container">
@@ -16,8 +18,8 @@ const App = () => {
       <Navbar/>
       <div className="hero">hero</div>
       <div className="equipment-selector">
-        <ReelSelector className="equipment-select" types={equipmentTypes}/>
-        <ReelSelector className="item-level-select" types={equipmentLevel}/>
+        <ReelSelector className="equipment-select" types={equipmentTypes} gear={gear} setGear={setGear}/>
+        <ReelSelector className="item-level-select" types={equipmentLevel} gear={gear} setGear={setGear}/>
       </div>
       <div className="main">
         <h2 className="gear calculator"> Gear Calculator</h2>
