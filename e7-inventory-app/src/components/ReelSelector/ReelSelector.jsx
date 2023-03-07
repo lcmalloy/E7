@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './ReelSelector.scss'
 
 let selectEquipment = {
@@ -22,6 +22,11 @@ let selectLevel = {
 const ReelSelector = (props) => {
 
   const equipmentSelect = (type) => {
+      props.setGear({
+      ...props.gear,
+      type: type.name,
+    })
+
     selectEquipment = {
       weapon: false,
       helmet: false,
