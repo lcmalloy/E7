@@ -10,7 +10,10 @@ import equipmentLevel from './static/level'
 
 
 const App = () => {
-  const [gear, setGear] = useState({})
+  const [gear, setGear] = useState({
+    type: null,
+    level: 0,
+  })
 
   return (
     <div className="container">
@@ -23,7 +26,7 @@ const App = () => {
       </div>
       <div className="main">
         <h2 className="gear calculator"> Gear Calculator</h2>
-      <Calculator />
+      <Calculator gear={gear}/>
       </div>
       <div className="similar-item">display-similar-items</div>
       <div className="footer">footer</div>

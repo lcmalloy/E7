@@ -98,6 +98,12 @@ h3 {
     .stat-input-critDamage {
       grid-area: critDamage;
     }
+    .stat-input-effectiveness {
+      grid-area: effectiveness;
+    }
+    .stat-input-effectResist {
+      grid-area: effectResist;
+    }
     .stat-input-speed {
       grid-area: speed;
     }
@@ -106,12 +112,13 @@ h3 {
     .calc-stats {
       width: 500px;
       height: 500px;
-      grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+      grid-template: repeat(7, 1fr)/ 1fr 1fr;
       grid-template-areas:
       "flatAtk flatHp"
       "flatDef atkPercent"
       "defPercent hpPercent"
       "critChance critDamage"
+      "effectiveness effectResist"
       "speed speed"
       ;
 
