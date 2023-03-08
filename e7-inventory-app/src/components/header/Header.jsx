@@ -1,12 +1,44 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 import { HiX, HiMenu } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 import logo from '../../assets/logo-large.png'
 import banner from '../../assets/epic_seven.jpeg'
 import './Header.scss'
 
+const paths = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'Tools',
+    path: '/tools',
+  },
+  {
+    name: 'Profile',
+    path: '/profile',
+  },
+  {
+    name: 'Inventory',
+    path: '/inventory',
+  },
+  {
+    name: 'Log In',
+    path: '/login',
+  },
+]
+
 const Header = () => {
   const [toggle, setToggle] = useState(false)
+
+  const path = paths.map((link) => (
+    <ul key={link.name}>
+      <Link to={link.path} onClick={() => setToggle(false)}>{link.name}
+      </Link>
+    </ul>
+  ))
+
   return (
     <div className="header">
       <div className="logo">
@@ -26,13 +58,7 @@ const Header = () => {
               transition={{ duration: 0.85, ease: 'easeOut'}}
               >
                 <HiX onClick={() => setToggle(false)} />
-                <ul>
-                  {['Home', 'Calculator', 'Inventory', 'Login'].map((link) => (
-                    <li key={link}>
-                      <a href={`#${link}`} onClick={() => setToggle(false)}>{link}</a>
-                    </li>
-                  ))}
-                </ul>
+                {path}
               </motion.div>
           )}
         </div>

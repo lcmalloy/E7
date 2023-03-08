@@ -11,8 +11,10 @@
 }
 
 .inventory-select-main {
+  width: 100vw;
+  max-width: 650px;
+  min-width: 480px;
   --gap: 1rem;
-  min-width: 500px;
   height: 176px;
   display: grid;
   grid-auto-flow: column;

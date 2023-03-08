@@ -5,6 +5,7 @@ import { BsCalculator } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
 import { MdOutlineInventory2 } from 'react-icons/md'
 import {RiLoginCircleLine} from 'react-icons/ri'
+import {Link} from 'react-router-dom'
 
 import logo from '../../assets/logo-small.png'
 
@@ -16,30 +17,40 @@ const Navbar = () => {
         <div className="nav-links">
           <div className="nav-links-container">
             <div className="circle-nav">
-              <IoHome />
+              <Link to="/">
+                <IoHome />
+              </Link>
             </div>
             Home
           </div>
           <div className="nav-links-container">
             <div className="circle-nav">
-              <BsCalculator />
+              <Link to="/tools">
+                <BsCalculator />
+              </Link>
             </div>
-            Calculator
+            Tools
           </div>
           <div className="nav-links-container">
           <div className="circle-nav">
-            <MdOutlineInventory2 />
+            <Link to="/inventory">
+              <MdOutlineInventory2 />
+            </Link>
           </div>
             Inventory
           </div>
           <div className="nav-links-container">
           <div className="circle-nav">
-            <CgProfile />
+            <Link to="/profile">
+              <CgProfile />
+            </Link>
           </div>
             Profile
           </div>
           <div className="nav-links-container">
-            <RiLoginCircleLine />
+            <Link to="/login">
+              <RiLoginCircleLine />
+            </Link>
           </div>
         </div>
       </div>
