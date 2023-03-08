@@ -13,7 +13,7 @@
 .inventory-select-main {
   --gap: 1rem;
   min-width: 500px;
-  height: 130px;
+  height: 176px;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 26%;
@@ -30,6 +30,7 @@
 
   .type-container {
     border-radius: 50px;
+    border: none;
     height: 100px;
     width: 100px;
     background: $primary2;
@@ -55,11 +56,18 @@
     }
   }
 
-  .type-container:active {
-    background: $secondary2;
-  }
+  // .type-container:focus {
+  //   background: $secondary2;
+  // }
 }
 
 .inventory-select-main > * {
   scroll-snap-align: start;
+}
+
+.type-container.selected {
+  background: $secondary2;
+  border-radius: 60px;
+  height: 120px;
+  width: 120px;
 }
