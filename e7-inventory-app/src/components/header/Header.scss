@@ -8,8 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
   margin-right: 40px;
+  background: white;
 
   svg {
     width: 70%;
@@ -25,11 +25,11 @@
     padding: 1rem;
     width: 40%;
     height: 100vh;
-    border-left: solid black;
+    border-left: 1.2px solid black;
     display: flex;
     flex-direction: column;
 
-    background-color: rgb(255, 255, 255);
+    background-color: $secondary2;
     // box-shadow: 0 0 20px rgba(168,168,168,0.15);
 
     svg {

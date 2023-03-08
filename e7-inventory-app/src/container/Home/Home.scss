@@ -113,6 +113,7 @@ h2 {
       }
       .equipment-selector {
         grid-template: 1fr/repeat(2, 1fr);
+        column-gap: 20px;
         grid-template-areas:
         "equip-type equip-level"
         ;

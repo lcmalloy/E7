@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import {Link} from 'react-router-dom'
 
-import SignUp from '../SignUp/SignUp'
 import './Login.scss'
 
 const Login = () => {
@@ -35,7 +34,12 @@ const Login = () => {
         </form>
       </div>
       <div className="additional">
-        Need an Account? <Link to="/signup">Sign Up</Link>
+        <p>
+          Need an Account? <Link to="/signup">Sign Up</Link>
+        </p>
+        <p>
+          <Link to="/">Home</Link>
+        </p>
       </div>
     </div>
   )
