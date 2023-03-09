@@ -4,7 +4,7 @@ import './HpBar.scss'
 const HpBar = (props) => {
 
   return (
-      <div className="hp-bar" style={{ "--percent": props.score === 0 ? 100 : props.score}}>
+      <div className="hp-bar" style={{ "--percent": props.calcActive ? props.score : 100}}>
       </div>
   )
 }

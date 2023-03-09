@@ -16,7 +16,8 @@ min - max level scores at different levels
 */
 
 const Calculator = (props) => {
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState(0);
+  const [calcActive, setCalcActive] = useState(false);
   const [equipmentStat, setEquipmentStat] = useState({
     flatAtk: 0,
     flatHp: 0,
@@ -49,6 +50,7 @@ const Calculator = (props) => {
       }
     )
     setScore(0);
+    setCalcActive(false);
   }
 
   const generateGearScore = (e) => {
@@ -92,6 +94,7 @@ const Calculator = (props) => {
     } else {
       setScore(gearScore)
     }
+    setCalcActive(true)
   }
 
   const statInput = stats.map((stat) => (
@@ -114,7 +117,7 @@ const Calculator = (props) => {
   return (
     <div className="calc-container-main">
       <h3>Gear Quality</h3>
-      <HpBar  score={score}/>
+      <HpBar  score={score} calcActive={calcActive}/>
       <h3>Calculator</h3>
       <div className="calc-stats-context-container">
         <div className="calc-main-stat">
@@ -126,7 +129,7 @@ const Calculator = (props) => {
         </div>
         <div className="calc-main-context">
           <div className="calc-context">
-            <GearScoreStatus score={score} level={props.gear.level}/>
+            <GearScoreStatus score={score} calcActive={calcActive} gear={props.gear}/>
           </div>
         </div>
       </div>
