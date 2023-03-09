@@ -20,8 +20,8 @@ const GearScoreStatus = (props) => {
         <section className="context-info">
           <div className="current-equipment">
             <h2 className="status-equip-h"> Current Equipment: </h2>
-            <p className="status-equip-type"> Equipment Type: {props.gear.type}</p>
-            <p className="status-equip-level"> Equipment Level: {props.gear.level}</p>
+            <p> Equipment Type: {props.gear.type}</p>
+            <p> Equipment Level: {props.gear.level}</p>
           </div>
           <p> Current Stat: {Math.floor(props.score)} </p>
           <p className="quality-e"> Quality: Excellent </p>
@@ -34,8 +34,8 @@ const GearScoreStatus = (props) => {
         <section className="context-info">
           <div className="current-equipment">
             <h2 className="status-equip-h"> Current Equipment: </h2>
-            <p className="status-equip-type"> Equipment Type: {props.gear.type}</p>
-            <p className="status-equip-level"> Equipment Level: {props.gear.level}</p>
+            <p> Equipment Type: {props.gear.type}</p>
+            <p> Equipment Level: {props.gear.level}</p>
           </div>
           <p> Current Stat: {Math.floor(props.score)} </p>
           <p className="quality-g"> Quality: Great </p>
@@ -48,8 +48,8 @@ const GearScoreStatus = (props) => {
         <section className="context-info">
           <div className="current-equipment">
             <h2 className="status-equip-h"> Current Equipment: </h2>
-            <p className="status-equip-type"> Equipment Type: {props.gear.type}</p>
-            <p className="status-equip-level"> Equipment Level: {props.gear.level}</p>
+            <p> Equipment Type: {props.gear.type}</p>
+            <p> Equipment Level: {props.gear.level}</p>
           </div>
           <p> Current Stat: {Math.floor(props.score)} </p>
           <p className="quality-a"> Quality: Average </p>
@@ -62,8 +62,8 @@ const GearScoreStatus = (props) => {
         <section className="context-info">
           <div className="current-equipment">
             <h2 className="status-equip-h"> Current Equipment: </h2>
-            <p className="status-equip-type"> Equipment Type: {props.gear.type}</p>
-            <p className="status-equip-level"> Equipment Level: {props.gear.level}</p>
+            <p> Equipment Type: {props.gear.type}</p>
+            <p> Equipment Level: {props.gear.level}</p>
           </div>
           <p> Current Stat: {Math.floor(props.score)} </p>
           <p className="quality-o"> Quality: Ok </p>
@@ -76,8 +76,8 @@ const GearScoreStatus = (props) => {
         <section className="context-info">
           <div className="current-equipment">
             <h2 className="status-equip-h"> Current Equipment: </h2>
-            <p className="status-equip-type"> Equipment Type: {props.gear.type}</p>
-            <p className="status-equip-level"> Equipment Level: {props.gear.level}</p>
+            <p> Equipment Type: {props.gear.type}</p>
+            <p> Equipment Level: {props.gear.level}</p>
           </div>
           <p> Current Stat: {Math.floor(props.score)} </p>
           <p className="quality-p"> Quality: Poor </p>

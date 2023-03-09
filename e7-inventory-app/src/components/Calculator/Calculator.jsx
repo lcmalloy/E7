@@ -104,6 +104,7 @@ const Calculator = (props) => {
         type="number"
         id={`calc-${stat}`}
         value={equipmentStat[`${stat}`]}
+        min="0"
         onChange={e => {
           setEquipmentStat({
             ...equipmentStat,
