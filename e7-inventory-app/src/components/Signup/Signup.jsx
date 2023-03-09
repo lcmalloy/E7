@@ -1,18 +1,39 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../Contexts/AuthContext.js'
 
 // import './SignUp.scss'
 
 const SignUp = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const confirmPasswordRef = useRef();
+  const passwordConfirmRef = useRef();
+  const { signup } = useAuth();
+  const [ error, setError ] = useState('');
+  const [ loading, setLoading ] = useState(false);
+
+   const handleSubmit = async(e) => {
+    e.preventDefault()
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError('Passwords do not match')
+    }
+
+    try {
+      setError('')
+      setLoading(true)
+      await signup(emailRef.current.value, passwordRef.current.value)
+    } catch {
+      setError('Failer to create an account')
+    }
+    setLoading(false)
+  }
 
   return (
     <div className="background-login-main">
       <div className="card">
         <h2>Create Account</h2>
-        <form>
+        <p>{error}</p>
+        <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="email">Email </label>
             <input
@@ -37,10 +58,10 @@ const SignUp = () => {
               type="password"
               required
               id="confirm-password"
-              ref={confirmPasswordRef}
+              ref={passwordConfirmRef}
             />
           </div>
-          <button type="submit">Create Account</button>
+          <button type="submit" disabled={loading}>Create Account</button>
         </form>
       </div>
       <div className="additional">

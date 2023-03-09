@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { HiX, HiMenu } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 import logo from '../../assets/logo-large.png'
-import banner from '../../assets/epic_seven.jpeg'
+import banner from '../../assets/banner2.png'
 import './Header.scss'
 
 const paths = [
@@ -46,7 +46,7 @@ const Header = () => {
       </div>
       <div className="horizontal-banner-main">
         <div className="horizontal-banner-container">
-          <img src={null} alt='banner' />
+          <img src={banner} alt='banner' />
         </div>
       </div>
       <div className="nav-menu">
