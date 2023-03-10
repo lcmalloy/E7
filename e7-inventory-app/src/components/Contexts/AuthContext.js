@@ -9,9 +9,20 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const [ currentUser, setCurrentUser ] = useState()
+  const [ isSignedIn, setIsSignedIn ] = useState(false)
 
   const signup = (email, password) => {
     return auth.createUserWithEmailAndPassword(email, password)
+  }
+
+  const login = (email, password) => {
+    setIsSignedIn(true)
+    return auth.signInWithEmailAndPassword(email, password)
+  }
+
+  const logout = () => {
+    setIsSignedIn(false);
+    return auth.signOut();
   }
 
   useEffect(() => {
@@ -23,7 +34,10 @@ export const AuthProvider = ({ children }) => {
 
   const value = {
     currentUser,
-    signup
+    isSignedIn,
+    signup,
+    login,
+    logout
   }
 
   return (

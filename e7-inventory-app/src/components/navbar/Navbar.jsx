@@ -5,11 +5,14 @@ import { BsCalculator } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
 import { MdOutlineInventory2 } from 'react-icons/md'
 import {RiLoginCircleLine} from 'react-icons/ri'
+import {GrLogout} from 'react-icons/gr'
 import {Link} from 'react-router-dom'
 
 import logo from '../../assets/logo-small.png'
+import { useAuth } from '../Contexts/AuthContext.js'
 
 const Navbar = () => {
+  const { isSignedIn, logout } = useAuth()
    return (
     <div className="nav">
       <div className="vertical-nav-container">
@@ -48,9 +51,15 @@ const Navbar = () => {
             Profile
           </div>
           <div className="nav-links-container">
-            <Link to="/login">
-              <RiLoginCircleLine />
-            </Link>
+            { !isSignedIn && (
+              <Link to="/login">
+                <RiLoginCircleLine />
+              </Link>
+            )}
+            { isSignedIn && (
+              <GrLogout onClick={logout}/>
+            )}
+
           </div>
         </div>
       </div>
