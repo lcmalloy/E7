@@ -12,9 +12,9 @@ import logo from '../../assets/logo-small.png'
 import { useAuth } from '../Contexts/AuthContext.js'
 
 const Navbar = () => {
-  const { isSignedIn, logout } = useAuth()
+  const { logout, currentUser } = useAuth()
    return (
-    <div className="nav">
+     <div className="nav">
       <div className="vertical-nav-container">
         <img src={logo} alt="logo"/>
         <div className="nav-links">
@@ -51,12 +51,12 @@ const Navbar = () => {
             Profile
           </div>
           <div className="nav-links-container">
-            { !isSignedIn && (
+            { !currentUser?.email && (
               <Link to="/login">
                 <RiLoginCircleLine />
               </Link>
             )}
-            { isSignedIn && (
+            { currentUser?.email && (
               <GrLogout onClick={logout}/>
             )}
 
