@@ -7,7 +7,7 @@
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border: solid rgb(108, 108, 108);
-    min-width: 415px;
+    min-width: 26em;
 
   }
 
@@ -16,7 +16,7 @@
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: calc(var(--percent) * 1%);
     height: 100%;
     background: #1ce306;

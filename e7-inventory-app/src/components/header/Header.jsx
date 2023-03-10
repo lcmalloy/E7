@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import { HiX, HiMenu } from 'react-icons/hi'
 import { motion } from 'framer-motion'
-import logo from '../../assets/logo-large.png'
-import banner from '../../assets/banner2.png'
+
 import './Header.scss'
+import logo from '../../assets/logo-large.png'
+import banner from '../../assets/epic7_banner2.jpg'
+import { useAuth } from '../Contexts/AuthContext.js'
 
 const paths = [
   {
@@ -23,14 +25,12 @@ const paths = [
     name: 'Inventory',
     path: '/inventory',
   },
-  {
-    name: 'Log In',
-    path: '/login',
-  },
 ]
+
 
 const Header = () => {
   const [toggle, setToggle] = useState(false)
+  const { isSignedIn } = useAuth();
 
   const path = paths.map((link) => (
     <ul key={link.name}>
@@ -59,6 +59,13 @@ const Header = () => {
               >
                 <HiX onClick={() => setToggle(false)} />
                 {path}
+                { isSignedIn && (
+                  <ul>
+                    <Link to='/login' onClick={() => setToggle(false)}>
+                      Log In
+                    </Link>
+                  </ul>
+                )}
               </motion.div>
           )}
         </div>

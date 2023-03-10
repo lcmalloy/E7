@@ -34,11 +34,19 @@
       height: 40px;
       width: 40px;
       transition: color 0.3s ease-in-out;
+
+      path {
+        transition: stroke 0.3s ease-in-out;
+      }
     }
 
     svg:hover {
       color: white;
       cursor: crosshair;
+
+      path {
+        stroke: white;
+      }
     }
   }
 }
