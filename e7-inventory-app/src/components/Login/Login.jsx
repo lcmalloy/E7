@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import {Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../Contexts/AuthContext.js'
 
+import banner from '../../assets/epic7_banner.jpg'
 import './Login.scss'
 
 const Login = () => {
@@ -28,6 +29,9 @@ const Login = () => {
   return (
     <div className="background-login-main">
       <div className="card">
+        <div className="banner-img">
+          <img src={banner} alt="e7 banner"/>
+        </div>
         <h2>Log In</h2>
         <p>{error}</p>
         <form onSubmit={handleSubmit}>

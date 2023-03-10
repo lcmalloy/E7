@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 import './Header.scss'
 import logo from '../../assets/logo-large.png'
-import banner from '../../assets/banner2.png'
+import banner from '../../assets/epic7_banner2.jpg'
 import { useAuth } from '../Contexts/AuthContext.js'
 
 const paths = [

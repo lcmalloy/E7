@@ -64,12 +64,14 @@
 }
 
 .horizontal-banner-container {
-  height: 100%;
+  height: 13em;
   width: 100%;
   background-color: $primary3;
 
   img {
     object-fit: cover;
     height: 100%;
+    width: 100%;
+    object-position: 130% 4%;
   }
 }
