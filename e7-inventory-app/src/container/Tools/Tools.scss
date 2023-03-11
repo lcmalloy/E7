@@ -1,0 +1,31 @@
+@import '../../App.scss';
+
+.main-tools {
+  width:100vw;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg1;
+}
+
+.card-tools {
+  max-height: 1200px;
+  display: flex;
+  background-color: rgba(40, 0, 95, 0.301);
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 50px;
+  border-radius: 20px;
+  border: 2px solid rgb(95, 95, 95);
+
+  .equipment-selector {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    padding-top: 0;
+    gap: 50px;
+  }
+}
+
+

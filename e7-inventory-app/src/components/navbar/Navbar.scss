@@ -1,6 +1,7 @@
 @import '../../App.scss';
 
 .vertical-nav-container {
+  z-index: 999;
   width: 6em;
   height: 100vh;
   border-right: solid black;
@@ -26,7 +27,7 @@
   }
 
   .nav-links-container:last-child {
-    padding-top: 33em;
+    padding-top: calc(var(--window-height) - 594px);
     flex-direction: column-reverse;
 
     svg {

@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <div className="background-login-main">
-      <div className="card">
+      <div className="card-auth">
         <div className="banner-img">
           <img src={banner} alt="e7 banner"/>
         </div>

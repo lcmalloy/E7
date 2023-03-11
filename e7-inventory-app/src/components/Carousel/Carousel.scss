@@ -1,0 +1,23 @@
+@import 'react-alice-carousel/lib/alice-carousel.css';
+@import '../../App.scss';
+
+
+.alice-carousel {
+  margin-top: 50px;
+  height: 400px;
+  width: 90%;
+  div {
+    background-color: $primary2;
+  }
+  .item {
+    height: 300px;
+    width: 400px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary2;
+    img {
+      max-height: 200px;
+    }
+  }
+}

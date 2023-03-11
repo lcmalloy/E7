@@ -32,7 +32,7 @@ const SignUp = () => {
 
   return (
     <div className="background-login-main">
-      <div className="card">
+      <div className="card-auth">
         <div className="banner-img">
           <img src={banner2} alt="e7 banner"/>
         </div>
