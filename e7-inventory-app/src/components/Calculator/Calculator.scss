@@ -17,6 +17,7 @@ h3 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 70px;
+
     }
 
     .calc-main-stat, .calc-main-context {
@@ -37,7 +38,7 @@ h3 {
 
     .calc-stats {
       background-color: $secondary1;
-      width: 350px;
+      width: 100%;
       border-radius: 50px;
       display: grid;
       align-content: space-around;

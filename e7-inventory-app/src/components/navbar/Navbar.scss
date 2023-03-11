@@ -1,6 +1,7 @@
 @import '../../App.scss';
 
 .vertical-nav-container {
+  z-index: 999;
   width: 6em;
   height: 100vh;
   border-right: solid black;

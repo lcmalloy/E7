@@ -25,7 +25,7 @@ const Profile = () => {
   }
   const username = currentUser?.email.split('@')
   return (
-    <div className="profile-main">
+    <div className="main">
       <div className="profile-card">
         { error && (
           <p>{error}</p>
