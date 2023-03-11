@@ -43,7 +43,7 @@ h3 {
       display: grid;
       align-content: space-around;
       justify-items: center;
-      grid-template: repeat(1fr, 10) / 1fr 1fr;
+      grid-template: repeat(12, 1fr) / 12em 12em;
       grid-template-areas:
       "flatAtk flatAtk"
       "flatHp flatHp"

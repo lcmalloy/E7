@@ -19,9 +19,9 @@ const Home = () => {
       <Header/>
       <Navbar/>
       <div className="hero">hero</div>
-      <div className="equipment-selector">
-        <ReelSelector className="equipment-select" types={equipmentTypes} gear={gear} setGear={setGear}/>
-        <ReelSelector className="item-level-select" types={equipmentLevel} gear={gear} setGear={setGear}/>
+      <div className="equipment-selector-home">
+        <ReelSelector className="equipment-select-home" types={equipmentTypes} gear={gear} setGear={setGear}/>
+        <ReelSelector className="item-level-select-home" types={equipmentLevel} gear={gear} setGear={setGear}/>
       </div>
       <div className="main">
         <h2 className="gear calculator"> Gear Calculator</h2>

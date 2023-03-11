@@ -20,13 +20,8 @@ const Carousel = () => {
     <AliceCarousel
       autoHeight
       autoWidth
-      infinite
-      controlsStrategy="default,alternate,responsive"
       mouseTracking
-      autoPlay={true}
       disableButtonsControls
-      animationDuration={30000}
-      keyboardNavigation={true}
       items={items}
     />
   )
