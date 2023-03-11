@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbar.scss'
 import { IoHome } from 'react-icons/io5'
 import { BsCalculator } from 'react-icons/bs'
@@ -11,8 +11,24 @@ import {Link} from 'react-router-dom'
 import logo from '../../assets/logo-small.png'
 import { useAuth } from '../Contexts/AuthContext.js'
 
+const getHeight = () => window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
 const Navbar = () => {
   const { logout, currentUser } = useAuth()
+  const [ height, setHeight ] = useState(getHeight())
+
+  useEffect(() => {
+    let timeoutId = null;
+    const resizeListener = () => {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => setHeight(getHeight()), 100);
+    }
+    window.addEventListener('resize', resizeListener);
+
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+    }
+  }, [])
    return (
      <div className="nav">
       <div className="vertical-nav-container">
@@ -50,7 +66,7 @@ const Navbar = () => {
           </div>
             Profile
           </div>
-          <div className="nav-links-container">
+          <div className="nav-links-container" style={{"--window-height" : `${height}px`}}>
             { !currentUser?.email && (
               <Link to="/login">
                 <RiLoginCircleLine />
@@ -59,7 +75,6 @@ const Navbar = () => {
             { currentUser?.email && (
               <GrLogout onClick={logout}/>
             )}
-
           </div>
         </div>
       </div>

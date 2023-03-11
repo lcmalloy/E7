@@ -27,7 +27,7 @@
   }
 
   .nav-links-container:last-child {
-    padding-top: 33em;
+    padding-top: calc(var(--window-height) - 594px);
     flex-direction: column-reverse;
 
     svg {
