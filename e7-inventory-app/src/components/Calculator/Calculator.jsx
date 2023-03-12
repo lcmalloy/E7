@@ -19,34 +19,34 @@ const Calculator = (props) => {
   const [score, setScore] = useState(0);
   const [calcActive, setCalcActive] = useState(false);
   const [equipmentStat, setEquipmentStat] = useState({
-    flatAtk: 0,
-    flatHp: 0,
-    flatDef: 0,
-    atkPercent: 0,
-    defPercent: 0,
-    hpPercent: 0,
-    critChance: 0,
-    critDamage: 0,
-    effectiveness: 0,
-    effectResist: 0,
-    speed: 0,
+    flatAtk: null,
+    flatHp: null,
+    flatDef: null,
+    atkPercent: null,
+    defPercent: null,
+    hpPercent: null,
+    critChance: null,
+    critDamage: null,
+    effectiveness: null,
+    effectResist: null,
+    speed: null,
   })
 
   const resetStatValues = (e) => {
     e.preventDefault();
     setEquipmentStat(
       {
-        flatAtk: 0,
-        flatHp: 0,
-        flatDef: 0,
-        atkPercent: 0,
-        defPercent: 0,
-        hpPercent: 0,
-        critChance: 0,
-        critDamage: 0,
-        effectiveness: 0,
-        effectResist: 0,
-        speed: 0,
+        flatAtk: null,
+        flatHp: null,
+        flatDef: null,
+        atkPercent: null,
+        defPercent: null,
+        hpPercent: null,
+        critChance: null,
+        critDamage: null,
+        effectiveness: null,
+        effectResist: null,
+        speed: null,
       }
     )
     setScore(0);
@@ -58,18 +58,18 @@ const Calculator = (props) => {
     const calculateCurrentGearScore = () => {
       let currentStat = 0;
 
-      currentStat += (+equipmentStat.flatAtk / 10);
-      currentStat += (+equipmentStat.flatDef / 6);
-      currentStat += (+equipmentStat.flatHp / 50);
-      currentStat += +equipmentStat.atkPercent;
-      currentStat += +equipmentStat.defPercent;
-      currentStat += +equipmentStat.hpPercent;
-      currentStat += +equipmentStat.effectiveness;
-      currentStat += +equipmentStat.effectResist;
-      currentStat += (+equipmentStat.critChance * 1.5);
-      currentStat += (+equipmentStat.critDamage * 1.1);
-      currentStat += (+equipmentStat.speed * 1.9);
-
+      currentStat += equipmentStat.flatAtk ? (+equipmentStat.flatAtk / 10) : 0;
+      currentStat += equipmentStat.flatDef ? (+equipmentStat.flatDef / 6) : 0;
+      currentStat += equipmentStat.flatHp ? (+equipmentStat.flatHp / 50) : 0;
+      currentStat += equipmentStat.atkPercent ? +equipmentStat.atkPercent : 0;
+      currentStat += equipmentStat.defPercent ? +equipmentStat.defPercent : 0;
+      currentStat += equipmentStat.hpPercent ? +equipmentStat.hpPercent : 0;
+      currentStat += equipmentStat.effectiveness ? +equipmentStat.effectiveness : 0;
+      currentStat += equipmentStat.effectResist ? +equipmentStat.effectResist : 0;
+      currentStat += equipmentStat.critChance ? (+equipmentStat.critChance * 1.5) : 0;
+      currentStat += equipmentStat.critDamage ? (+equipmentStat.critDamage * 1.1) : 0;
+      currentStat += equipmentStat.speed ? (+equipmentStat.speed * 1.9) : 0;
+      console.log(currentStat)
       //((current - min) / (max - min)) * 100
       switch(props.gear.level) {
         case 0:
@@ -103,7 +103,7 @@ const Calculator = (props) => {
       <input
         type="number"
         id={`calc-${stat}`}
-        value={equipmentStat[`${stat}`]}
+        value={equipmentStat[`${stat}`] ? equipmentStat[`${stat}`] : 0}
         min="0"
         onChange={e => {
           setEquipmentStat({

@@ -89,7 +89,7 @@ h2 {
   }
   @media (min-width: 80em) {
     .container {
-      grid-template: 13em 3fr 25em 60em 2fr 2fr / 6em 9fr 1em;
+      grid-template: 20em 3fr 25em 65em 2fr 2fr / 6em 9fr 1em;
       grid-template-areas:
         "nav-l header1 header1"
         "nav-l hero hero"

@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../Contexts/AuthContext.js'
 
 import banner2 from '../../assets/epic7_banner.jpg'
@@ -13,6 +13,7 @@ const SignUp = () => {
   const { signup } = useAuth();
   const [ error, setError ] = useState('');
   const [ loading, setLoading ] = useState(false);
+  const navigate = useNavigate()
 
    const handleSubmit = async(e) => {
     e.preventDefault()
@@ -24,8 +25,9 @@ const SignUp = () => {
       setError('')
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
+      navigate("/")
     } catch {
-      setError('Failer to create an account')
+      setError('Failed to create an account')
     }
     setLoading(false)
   }
