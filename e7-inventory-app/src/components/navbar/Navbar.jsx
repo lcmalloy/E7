@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { IoHomeOutline } from 'react-icons/io5'
 import { AiOutlineInfoCircle, AiOutlineCalculator } from 'react-icons/ai'
 
-import './navbar.scss'
+import './Navbar.scss'
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState('#')

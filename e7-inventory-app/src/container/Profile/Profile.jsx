@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 import { useAuth } from '../../components/Contexts/AuthContext.js'
-import VerticalNav from '../../components/Navbar/Vertical_Navbar'
+import VerticalNav from '../../components/navbar/Vertical_Navbar'
 import profilePhoto from '../../assets/stene.jpg'
 import './Profile.scss'
 

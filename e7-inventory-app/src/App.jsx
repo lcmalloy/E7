@@ -5,7 +5,7 @@ import Home from './container/Home/Home'
 import Tools from './container/Tools/Tools'
 import Profile from './container/Profile/Profile'
 import Inventory from './container/Inventory/Inventory'
-import SignUp from './components/SignUp/SignUp'
+import SignUp from './components/Signup/Signup'
 import Login from './components/Login/Login'
 import PrivateRoutes from './wrapper/PrivateRoutes.js'
 

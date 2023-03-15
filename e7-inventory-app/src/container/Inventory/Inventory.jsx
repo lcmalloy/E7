@@ -1,6 +1,6 @@
 import React from 'react'
 
-import VerticalNav from '../../components/Navbar/Vertical_Navbar'
+import VerticalNav from '../../components/navbar/Vertical_Navbar'
 
 const Inventory = () => {
   return (
