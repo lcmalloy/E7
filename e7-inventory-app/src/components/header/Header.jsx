@@ -1,56 +1,34 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
-import { HiX, HiMenu } from 'react-icons/hi'
-import { motion } from 'framer-motion'
 
 import './Header.scss'
-import logo from '../../assets/logo-large.png'
-import banner from '../../assets/epic7_banner2.jpg'
+import e7_image from '../../assets/e7_image1.jpg'
 import { useAuth } from '../Contexts/AuthContext.js'
 
-const paths = [
-  {
-    name: 'Home',
-    path: '/',
-  },
-  {
-    name: 'Tools',
-    path: '/tools',
-  },
-  {
-    name: 'Profile',
-    path: '/profile',
-  },
-  {
-    name: 'Inventory',
-    path: '/inventory',
-  },
-]
 
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false)
   const { isSignedIn } = useAuth();
 
-  const path = paths.map((link) => (
-    <ul key={link.name}>
-      <Link to={link.path} onClick={() => setToggle(false)}>{link.name}
-      </Link>
-    </ul>
-  ))
-
   return (
-    <div className="header">
-      <div className="logo">
-        <img src={logo} alt="logo"/>
-      </div>
-      <div className="horizontal-banner-main">
-        <div className="horizontal-banner-container">
-          <img src={banner} alt='banner' />
+    <header id="#">
+      <div className="container header__container">
+        <h5>Welcome to</h5>
+        <h1>Epic 7 Inventory Management / Gear Calculator</h1>
+        <h5 className="text-light">Designed by Lawrence Malloy</h5>
+        <div className="header__image">
+          <img src={e7_image} alt="" />
         </div>
+        <a href="#tools" className="scroll__down">Scroll to Calculator</a>
       </div>
-      <div className="nav-menu">
-        <div className="nav-menu-display">
+    </header>
+  )
+}
+
+export default Header
+
+
+/*
+ <div className="nav-menu-display">
         <HiMenu onClick={() => setToggle(true)} />
           {toggle && (
             <motion.div
@@ -69,9 +47,5 @@ const Header = () => {
               </motion.div>
           )}
         </div>
-      </div>
-    </div>
-  )
-}
 
-export default Header
+*/

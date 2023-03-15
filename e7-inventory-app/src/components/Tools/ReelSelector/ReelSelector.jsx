@@ -76,8 +76,10 @@ const ReelSelector = (props) => {
       { !props.types[0].containsImage && (
         <h2>Please Select Item Level:</h2>
       )}
-      <div className="inventory-select-main">
-        {types}
+      <div className="inventory__select">
+        <div className="inventory-select-main">
+          {types}
+        </div>
       </div>
     </div>
   )

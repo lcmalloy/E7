@@ -1,0 +1,40 @@
+@import '../../../index.scss';
+
+.calculator__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+
+  .calculator__hpBar {
+    width: 100%;
+  }
+
+  .calculator__main {
+    display: flex;
+    gap: 10rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    input {
+      width: 100%;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background: transparent;
+      color: $color-white;
+      border: 2px solid $color-primary-variant;
+    }
+  }
+}
+
+.calc__CTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}

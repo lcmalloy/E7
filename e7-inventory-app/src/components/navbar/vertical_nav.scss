@@ -1,25 +1,27 @@
 @import '../../index.scss';
 
-nav.nav {
+nav.vertical__nav {
   background: rgba(0,0,0,0.3);
-  width: max-content;
+  height: 100%;
+  width: 13rem;
   display: block;
-  padding: 0.7rem 1.7rem;
   z-index: 2;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 2rem;
+  left:0;
+  bottom: 0;
   display: flex;
   gap: 0.8rem;
-  border-radius: 3rem;
   backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   a {
     background: transparent;
     padding: 0.9rem;
-    border-radius: 50%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     color: $color-light;
     font-size: 1.1rem;
   }
@@ -32,12 +34,29 @@ nav.nav {
     background: $color-bg;
     color: $color-white
   }
+
+  .vertical__nav-login:last-child {
+    padding-top: calc(var(--window-height) - 300px);
+  }
+
+  .vertical__nav-login{
+    color: $color-light;
+    width: 100%
+  }
 }
+
+
 
 /* =========== MEDIA QUERIES (MEDIUM DEVICES) =============== */
 @media screen and (max-width: 1024px) {
+  nav.vertical__nav {
+    width: 6rem;
+
+  }
 }
 /* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
-
+  nav.vertical__nav {
+    display: none;
+  }
 }

@@ -1,81 +1,60 @@
-@import '../../App';
+@import '../../index.scss';
 
-.nav-menu-display {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 40px;
-  background: white;
+header {
+  height: 100vh;
+  padding-top: 12rem;
 
-  svg {
-    width: 70%;
+
+  .header__container {
+    text-align: center;
     height: 100%;
-    color: rgb(0, 0, 0);
-  }
-  div {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    border-left: 1.2px solid black;
-    display: flex;
-    flex-direction: column;
-
-    background-color: $secondary2;
-    // box-shadow: 0 0 20px rgba(168,168,168,0.15);
-
-    svg {
-      width: 20%;
-      height: 10%;
-      color: $primary3;
-    }
-
-    ul {
-      margin-top: 2em;
-      a {
-        text-decoration: none;
-        font-size: 4em;
-        padding-left: 2em;
-        padding-top: 2em;
-      }
-    }
+    position: relative;
   }
 }
 
-.logo {
-  display: flex;
-  flex: 1;
-  align-items: center;
+
+
+/* =========== HEADER IMG ============== */
+
+.header__image {
+  background: linear-gradient($color-primary, $color-secondary);
+  width: 45rem;
+  height: 45rem;
+  position: absolute;
+  left: calc(50% - 22.5rem);
+  margin-top: 4rem;
+  padding: 0.5rem;
 
   img {
-    margin-left: 20px;
-    height: 150px;
-  }
-
-  @media (min-width: 80em) {
-    img {
-      display: none;
-    }
+    height: 100%;
   }
 }
 
-.horizontal-banner-container {
-  height: 13em;
-  width: 100%;
-  background-color: $primary3;
 
-  img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    object-position: 130% 4%;
+/* =========== SCROLL DOWN ============== */
+
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* =========== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+}
+/* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+
+  .scroll__down {
+    display: none;
   }
 }
