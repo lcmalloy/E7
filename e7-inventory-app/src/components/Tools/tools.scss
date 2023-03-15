@@ -1,0 +1,33 @@
+.tools__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+.tools__equipment-selector {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+  padding-bottom: 10rem;
+}
+
+.tools__calculator{
+  width: 100%;
+  text-align: center;
+}
+
+.calc__CTA {
+  margin: 0 auto;
+}
+
+/* =========== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+  .tools__equipment-selector{
+    grid-template-columns: 1fr;
+  }
+
+  .calculator__main {
+    flex-direction: column;
+  }
+}

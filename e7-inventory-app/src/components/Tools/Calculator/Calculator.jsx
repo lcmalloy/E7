@@ -91,8 +91,10 @@ const Calculator = (props) => {
     const gearScore = calculateCurrentGearScore();
     if (gearScore > 100) {
       setScore(100)
+    } else if (gearScore < 0) {
+      setScore(0)
     } else {
-      setScore(gearScore)
+      setScore(Math.floor(gearScore))
     }
     setCalcActive(true)
   }
@@ -116,22 +118,24 @@ const Calculator = (props) => {
   ))
 
   return (
-    <div className="calc-container-main">
-      <h3>Gear Quality</h3>
-      <HpBar  score={score} calcActive={calcActive}/>
-      <h3>Calculator</h3>
-      <div className="calc-stats-context-container">
-        <div className="calc-main-stat">
+    <div className="container calculator__container">
+      <div className="calculator__hpBar">
+        <h2>Gear Quality</h2>
+        <HpBar  score={score} calcActive={calcActive}/>
+      </div>
+      <div className="calculator__main">
+        <div className="calculator__form">
+          <h2>Calculator</h2>
           <form className="calc-stats" id="calc-form">
             {statInput}
-            <button type="submit" onClick={(e) => generateGearScore(e)}>Submit</button>
-            <button type="button" onClick={(e) => resetStatValues(e)}>Reset</button>
+            <div className="calc__CTA">
+              <button type="submit" onClick={(e) => generateGearScore(e)} className="btn">Submit</button>
+              <button type="button" onClick={(e) => resetStatValues(e)} className="btn btn-primary">Reset</button>
+            </div>
           </form>
         </div>
-        <div className="calc-main-context">
-          <div className="calc-context">
+        <div className="calculator__context">
             <GearScoreStatus score={score} calcActive={calcActive} gear={props.gear}/>
-          </div>
         </div>
       </div>
     </div>

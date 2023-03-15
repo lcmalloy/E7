@@ -1,0 +1,29 @@
+@import '../../index.scss';
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+
+  div {
+    background: $color-secondary;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: $transition;
+  }
+
+  div:hover {
+    background: transparent;
+    border-color: $color-primary-variant;
+    cursor: default;
+  }
+}
+
+/* =========== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+  }
+}
