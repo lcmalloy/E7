@@ -3,7 +3,7 @@
 nav.vertical__nav {
   background: rgba(0,0,0,0.3);
   height: 100%;
-  width: 13rem;
+  width: 8rem;
   display: block;
   z-index: 2;
   position: fixed;
@@ -36,12 +36,16 @@ nav.vertical__nav {
   }
 
   .vertical__nav-login:last-child {
-    padding-top: calc(var(--window-height) - 300px);
+    padding-top: calc(var(--window-height) - 340px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .vertical__nav-login{
-    color: $color-light;
-    width: 100%
+    width: 100%;
+
+
   }
 }
 

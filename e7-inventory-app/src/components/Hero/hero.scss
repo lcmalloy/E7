@@ -1,5 +1,10 @@
 @import '../../index.scss';
 
+
+#about {
+  height: 65vh;
+}
+
 .hero__container {
   display: grid;
   grid-template-columns: 45% 45%;
@@ -25,5 +30,12 @@
 @media screen and (max-width: 1024px) {
   .hero__container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+  #about {
+    height: 100vh;
   }
 }

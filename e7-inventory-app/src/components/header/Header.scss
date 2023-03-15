@@ -47,6 +47,12 @@ header {
   header {
     height: 68vh;
   }
+
+  .header__image {
+    height: 25rem;
+    width: 25rem;
+    left: calc(50% - 12.5rem);
+  }
 }
 /* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
@@ -56,5 +62,11 @@ header {
 
   .scroll__down {
     display: none;
+  }
+
+  .header__image {
+    height: 22rem;
+    width: 22rem;
+    left: calc(50% - 11rem);
   }
 }
