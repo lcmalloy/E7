@@ -1,13 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import './Header.scss'
 import e7_image from '../../assets/e7_image1.jpg'
-import { useAuth } from '../Contexts/AuthContext.js'
-
-
 
 const Header = () => {
-  const { isSignedIn } = useAuth();
 
   return (
     <header id="#">

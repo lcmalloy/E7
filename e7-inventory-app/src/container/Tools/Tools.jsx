@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import VerticalNavbar from '../../components/Navbar/Vertical_Navbar'
 import Calculator from '../../components/Tools/Tools'
