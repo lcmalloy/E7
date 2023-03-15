@@ -14,7 +14,7 @@ const Tools = () => {
     level: 0,
   })
   return (
-    <section id="tools">
+    <section id="tools" className="section__tools">
       <div className="container tools__container">
         <div className="tools__equipment-selector">
           <ReelSelector className="equipment-select" types={equipmentTypes} gear={gear} setGear={setGear}/>

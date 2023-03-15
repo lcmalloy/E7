@@ -1,6 +1,8 @@
 @import 'react-alice-carousel/lib/alice-carousel.css';
-@import '../../App.scss';
 
+.carousel {
+  height: 68vh;
+}
 
 .alice-carousel {
   margin-top: 50px;
@@ -13,9 +15,13 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: $primary2;
+    background-color: transparent;
     img {
       max-height: 200px;
     }
   }
+}
+
+.carousel__inventory {
+  text-align: center;
 }

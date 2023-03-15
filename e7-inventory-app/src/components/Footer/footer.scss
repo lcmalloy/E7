@@ -1,0 +1,39 @@
+@import '../../index.scss';
+
+footer {
+  background: $color-primary;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 7rem;
+
+  a {
+    color: $color-bg;
+  }
+
+  a.footer__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+
+  .permalinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer__copyright {
+    margin-top: 2rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+  .permalinks {
+    flex-direction: column;
+  }
+}

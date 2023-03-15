@@ -17,11 +17,8 @@
 }
 
 .inventory-select-main {
-  width: 100vw;
-  max-width: 650px;
-  min-width: 480px;
   --gap: 1rem;
-  height: 176px;
+  height: 10rem;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 26%;
@@ -37,8 +34,8 @@
   .type-container {
     border-radius: 4rem;
     border: none;
-    height: 8rem;
-    width: 8rem;
+    height: 7.5rem;
+    width: 7.5rem;
     overflow: hidden;
     background: transparent;
     border: 4px solid $color-primary-variant;
@@ -63,9 +60,6 @@
     background: black;
   }
 
-  // .type-container:focus {
-  //   background: $secondary2;
-  // }
 }
 
 .inventory-select-main > * {
@@ -75,10 +69,32 @@
 .type-container.selected {
   background: $color-primary;
   border-radius: 60px;
-  height: 120px;
-  width: 120px;
+  height: 7.5rem;
+  width: 7.5rem;
 
   img {
     filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(280deg) brightness(1000%) contrast(100%);
   }
+}
+
+/* =========== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+  .inventory-select-main{
+    height: 8rem;
+    .type-container {
+      height: 6rem;
+      width: 6rem;
+      img {
+        height: 5rem;
+      }
+    }
+  }
+
+  .inventory__select {
+    width: 75%;
+  }
+
+}
+/* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
 }

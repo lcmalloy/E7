@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './vertical_nav.scss'
 import { IoHome } from 'react-icons/io5'
 import { BsCalculator } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
@@ -7,6 +6,8 @@ import { MdOutlineInventory2 } from 'react-icons/md'
 import {RiLoginCircleLine} from 'react-icons/ri'
 import {GrLogout} from 'react-icons/gr'
 import {Link} from 'react-router-dom'
+
+import './vertical_navbar.scss'
 
 import { useAuth } from '../Contexts/AuthContext.js'
 
@@ -43,7 +44,7 @@ const Vertical_Navbar = () => {
           </Link>
         )}
         { currentUser?.email && (
-          <GrLogout onClick={logout}/>
+          <GrLogout stroke="white" fill="white" onClick={logout}/>
         )}
       </div>
     </nav>
