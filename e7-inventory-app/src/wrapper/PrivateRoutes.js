@@ -6,7 +6,7 @@ const PrivateRoutes = () => {
   const { currentUser } = useAuth()
 
   return (
-    currentUser ? <Outlet/> : <Navigate to='/login'/>
+    currentUser ? <Outlet/> : <Navigate to='/E7/login'/>
   )
 }
 

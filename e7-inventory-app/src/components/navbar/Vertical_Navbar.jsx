@@ -33,13 +33,13 @@ const Vertical_Navbar = () => {
 
    return (
      <nav className="vertical__nav">
-      <Link to="/" onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'active' : ''}><IoHome/></Link>
-      <Link onClick={() => setActiveNav('/tools')} to="/tools" className={activeNav === '/tools' ? 'active' : ''}><BsCalculator/></Link>
-      <Link to="/inventory" onClick={() => setActiveNav('/inventory')} className={activeNav === '/inventory' ? 'active' : ''}><MdOutlineInventory2/></Link>
-      <Link to="/profile" onClick={() => setActiveNav('/profile')} className={activeNav === '/profile' ? 'active' : ''}><CgProfile/></Link>
+      <Link to="/E7/" onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'active' : ''}><IoHome/></Link>
+      <Link onClick={() => setActiveNav('/tools')} to="/E7/tools" className={activeNav === '/tools' ? 'active' : ''}><BsCalculator/></Link>
+      <Link to="/E7/inventory" onClick={() => setActiveNav('/inventory')} className={activeNav === '/inventory' ? 'active' : ''}><MdOutlineInventory2/></Link>
+      <Link to="/E7/profile" onClick={() => setActiveNav('/profile')} className={activeNav === '/profile' ? 'active' : ''}><CgProfile/></Link>
       <div className="vertical__nav-login" style={{"--window-height" : `${height}px`}}>
         { !currentUser?.email && (
-          <Link to="/login">
+          <Link to="/E7/login">
             <RiLoginCircleLine />
           </Link>
         )}

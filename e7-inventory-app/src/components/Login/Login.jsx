@@ -19,7 +19,7 @@ const Login = () => {
       setError('')
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value)
-      navigate("/")
+      navigate("/E7/")
     } catch {
       setError('Failed to login')
     }
@@ -58,10 +58,10 @@ const Login = () => {
       </div>
       <div className="additional">
         <p>
-          Need an Account? <Link to="/signup">Sign Up</Link>
+          Need an Account? <Link to="/E7/signup">Sign Up</Link>
         </p>
         <p>
-          <Link to="/">Home</Link>
+          <Link to="/E7/">Home</Link>
         </p>
       </div>
     </div>

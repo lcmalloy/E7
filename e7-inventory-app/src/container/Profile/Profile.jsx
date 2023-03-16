@@ -21,7 +21,7 @@ const Profile = () => {
 
     try {
       await logout()
-      navigate('/')
+      navigate('/E7/')
     } catch {
       setError('Failed to log out')
     }
@@ -60,8 +60,8 @@ const Profile = () => {
               </div>
           </div>
           <div className="additionals">
-            <Link to="/">Return to Main</Link>
-            <Link to="/" onClick={handleLogOut}>Log Out</Link>
+            <Link to="/E7/">Return to Main</Link>
+            <Link to="/E7/" onClick={handleLogOut}>Log Out</Link>
           </div>
         </div>
       </section>

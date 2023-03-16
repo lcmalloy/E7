@@ -9,7 +9,7 @@ const Navbar = () => {
   const [activeNav, setActiveNav] = useState('#')
   return (
     <nav className="nav">
-      <a href="/#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><IoHomeOutline/></a>
+      <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><IoHomeOutline/></a>
       <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineInfoCircle/></a>
       <a href="#tools" onClick={() => setActiveNav('#tools')} className={activeNav === '#tools' ? 'active' : ''}><AiOutlineCalculator/></a>
 
