@@ -97,4 +97,7 @@
 }
 /* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
+  .reel-main {
+    display: none;
+  }
 }
