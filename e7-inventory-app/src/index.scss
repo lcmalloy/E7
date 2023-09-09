@@ -52,7 +52,6 @@ h1 {
 
 section {
   margin-top: 8rem;
-  height: 100vh;
   padding-top: 13rem;
 
   h2, h5 {
@@ -119,9 +118,12 @@ img {
 
   section {
     h2 {
-
       margin-bottom: 2rem;
     }
+  }
+
+  h1 {
+    font-size: 1.5rem;
   }
 }
 /* =========== MEDIA QUERIES (MEDIUM DEVICES) =============== */
@@ -131,6 +133,9 @@ img {
   }
 
   section {
-    margin-top: 6rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 }

@@ -97,7 +97,14 @@
 }
 /* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
-  .reel-main {
+  .reel-main:first-child {
     display: none;
+  }
+  .reel-main:nth-child(2) {
+    .inventory-select-main {
+      grid-auto-flow: row;
+      justify-content: center;
+      height: 20rem;
+    }
   }
 }

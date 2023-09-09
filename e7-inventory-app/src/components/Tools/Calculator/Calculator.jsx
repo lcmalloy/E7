@@ -69,7 +69,6 @@ const Calculator = (props) => {
       currentStat += equipmentStat.critChance ? (+equipmentStat.critChance * 1.5) : 0;
       currentStat += equipmentStat.critDamage ? (+equipmentStat.critDamage * 1.1) : 0;
       currentStat += equipmentStat.speed ? (+equipmentStat.speed * 1.9) : 0;
-      console.log(currentStat)
       //((current - min) / (max - min)) * 100
       switch(props.gear.level) {
         case 0:
@@ -105,8 +104,8 @@ const Calculator = (props) => {
       <input
         type="number"
         id={`calc-${stat}`}
-        value={equipmentStat[`${stat}`] ? equipmentStat[`${stat}`] : 0}
-        min="0"
+        value={equipmentStat[`${stat}`] ? equipmentStat[`${stat}`] : ''}
+        placeholder="0"
         onChange={e => {
           setEquipmentStat({
             ...equipmentStat,

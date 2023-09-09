@@ -1,7 +1,3 @@
-.section__tools {
-  height: 150vh;
-}
-
 .tools__container {
   display: flex;
   flex-direction: column;
@@ -27,11 +23,19 @@
 
 /* =========== MEDIA QUERIES (MEDIUM DEVICES) =============== */
 @media screen and (max-width: 1024px) {
-  .section__tools {
-    height: 200vh;
-  }
 
   .calculator__main {
     flex-direction: column;
+  }
+
+  .calc__CTA {
+    flex-direction: row;
+  }
+}
+
+/* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+  .calc__CTA {
+    flex-direction: column-reverse
   }
 }

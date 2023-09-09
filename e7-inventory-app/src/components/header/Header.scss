@@ -1,15 +1,19 @@
 @import '../../index.scss';
 
 header {
-  height: 100vh;
-  padding-top: 12rem;
+  height: 60vh;
+  padding-top: 7rem;
 
+}
 
-  .header__container {
-    text-align: center;
-    height: 100%;
-    position: relative;
-  }
+.header__title {
+  font-size: 2vw;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
 }
 
 
@@ -57,7 +61,14 @@ header {
 /* =========== MEDIA QUERIES (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
+    height: 0;
+  }
+
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2rem 0 2rem 0;
   }
 
   .scroll__down {
@@ -65,8 +76,6 @@ header {
   }
 
   .header__image {
-    height: 22rem;
-    width: 22rem;
-    left: calc(50% - 11rem);
+    display: none;
   }
 }

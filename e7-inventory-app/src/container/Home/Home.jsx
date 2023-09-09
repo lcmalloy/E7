@@ -5,7 +5,6 @@ import VerticalNavbar from '../../components/navbar/Vertical_Navbar'
 import Navbar from '../../components/navbar/Navbar'
 import Hero from '../../components/Hero/Hero'
 import Tools from '../../components/Tools/Tools'
-import Carousel from '../../components/Carousel/Carousel'
 import Footer from '../../components/Footer/Footer'
 import './Home.scss'
 
@@ -18,7 +17,6 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Tools />
-      <Carousel />
       <Footer />
     </>
   )
